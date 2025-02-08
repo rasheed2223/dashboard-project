@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>blueBox</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>UI Elements</li>
+                <li>Components</li>
+                <li>Forms Stuff</li>
+                <li>Data Table</li>
+                <li>Icons</li>
+                <li>Sample Page</li>
+                <li>Extra</li>
+                <button class="add-project">Add Project</button>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section class="dashboard-cards">
+                <div class="card purple">
+                    <h3>Total Payments</h3>
+                    <p>$500,000</p>
+                </div>
+                <div class="card blue">
+                    <h3>Pending Payments</h3>
+                    <p>$120,000</p>
+                </div>
+                <div class="card orange">
+                    <h3>Completed Payments</h3>
+                    <p>$380,000</p>
+                </div>
+            </section>
+            <section class="chart-container">
+                <canvas id="paymentChart"></canvas>
+            </section>
+            <section class="data-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>User Type</th>
+                            <th>Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mike Brand</td>
+                            <td>mike@email.com</td>
+                            <td>Admin</td>
+                            <td class="pending">Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="text" id="userType" placeholder="User Type">
+                    <select id="status">
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Failed">Failed</option>
+                    </select>
+                    <button id="addRow">Add Row</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
